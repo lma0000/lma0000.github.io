@@ -95,29 +95,31 @@ h3 {
 /* Project figures */
 
 .project-figure {
-    margin-top: 14px;
+    margin: 16px auto 0 auto;
     text-align: center;
 }
 
 .project-figure img {
-    display: inline-block;
-
+    display: block;
     width: 100%;
     max-width: 540px;
     height: auto;
-}
-
-.project-figure-wide {
-    margin-top: 14px;
-    text-align: center;
+    margin: 0 auto;
 }
 
 .project-figure-wide img {
-    display: inline-block;
-
-    width: 100%;
     max-width: 650px;
-    height: auto;
+}
+
+.project-figure figcaption {
+    max-width: 600px;
+    margin: 7px auto 0 auto;
+
+    color: var(--secondary);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
 
@@ -169,6 +171,15 @@ a:hover {
 
     .project {
         margin-bottom: 34px;
+    }
+
+    .project-figure,
+    .project-figure-wide {
+        margin-top: 14px;
+    }
+
+    .project-figure figcaption {
+        font-size: 0.75rem;
     }
 
 }
