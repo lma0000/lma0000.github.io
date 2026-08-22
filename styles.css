@@ -11,7 +11,7 @@
 /* Main page */
 
 body {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 50px 28px;
 
@@ -41,10 +41,18 @@ h1 {
 
 .subtitle {
     margin-top: 8px;
-    margin-bottom: 0;
+    margin-bottom: 2px;
 
     color: var(--secondary);
     font-size: 1rem;
+}
+
+.affiliation {
+    margin-top: 2px;
+    margin-bottom: 0;
+
+    color: var(--secondary);
+    font-size: 0.9rem;
 }
 
 
@@ -92,21 +100,18 @@ h3 {
 }
 
 
-/* Auditory project: text left, figure right */
+/* Project with image beside text */
 
 .project-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 1.25fr);
     gap: 30px;
-    align-items: start;
+    align-items: center;
 }
 
 .project-text {
     min-width: 0;
 }
-
-
-/* Project figures */
 
 .project-figure {
     margin: 0;
@@ -114,24 +119,37 @@ h3 {
 
 .project-figure img {
     display: block;
+
     width: 100%;
     height: auto;
+
+    border: 1px solid var(--border);
 }
 
-.project-figure-side {
-    width: 100%;
-}
+
+/* Wide project figures */
 
 .project-figure-wide {
-    max-width: 650px;
     margin: 16px auto 0 auto;
 }
 
-.project-figure figcaption {
+.project-figure-wide img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--border);
+}
+
+
+/* Figure captions */
+
+.project-figure figcaption,
+.project-figure-wide figcaption {
     margin-top: 7px;
 
     color: var(--secondary);
-
     font-size: 0.78rem;
     line-height: 1.5;
     text-align: left;
@@ -168,7 +186,7 @@ a:hover {
 
 /* Mobile */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     body {
         padding: 30px 20px;
@@ -190,19 +208,15 @@ a:hover {
 
     .project-row {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 16px;
     }
 
-    .project-figure-side {
-        max-width: 500px;
-        margin: 8px auto 0 auto;
+    .project-figure {
+        max-width: 520px;
     }
 
-    .project-figure-wide {
-        margin-top: 14px;
-    }
-
-    .project-figure figcaption {
+    .project-figure figcaption,
+    .project-figure-wide figcaption {
         font-size: 0.75rem;
     }
 
