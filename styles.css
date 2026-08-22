@@ -11,7 +11,7 @@
 /* Main page */
 
 body {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 50px 28px;
 
@@ -41,10 +41,18 @@ h1 {
 
 .subtitle {
     margin-top: 8px;
-    margin-bottom: 0;
+    margin-bottom: 2px;
 
     color: var(--secondary);
     font-size: 1rem;
+}
+
+.affiliation {
+    margin-top: 2px;
+    margin-bottom: 0;
+
+    color: var(--secondary);
+    font-size: 0.9rem;
 }
 
 
@@ -78,7 +86,7 @@ h3 {
 /* Projects */
 
 .project {
-    margin-bottom: 30px;
+    margin-bottom: 38px;
 }
 
 .project p {
@@ -89,6 +97,45 @@ h3 {
 .project-context {
     color: var(--secondary);
     font-size: 0.9rem;
+}
+
+
+/* Project with image beside text */
+
+.project-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 1.25fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.project-text {
+    min-width: 0;
+}
+
+.project-figure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--border);
+}
+
+
+/* Wide project figures */
+
+.project-figure-wide {
+    margin-top: 16px;
+}
+
+.project-figure-wide img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--border);
 }
 
 
@@ -122,7 +169,7 @@ a:hover {
 
 /* Mobile */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     body {
         padding: 30px 20px;
@@ -136,6 +183,19 @@ a:hover {
 
     section {
         margin-bottom: 34px;
+    }
+
+    .project {
+        margin-bottom: 34px;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-figure {
+        max-width: 520px;
     }
 
 }
